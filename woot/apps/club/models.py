@@ -4,7 +4,7 @@
 from django.db import models
 
 #local
-from apps.user.models import User
+from apps.users.models import User
 
 #util
 import datetime
@@ -17,13 +17,23 @@ class Club(models.Model):
 
 
   #properties
-
+  name = models.CharField(max_length=255)
 
   #methods
 
 
 #2. Member
 class Member(User):
+  #connections
+  club = models.ForeignKey(Club, related_name='members')
+
+  #properties
+
+
+
+  #methods
+
+class Coach(Member):
   #connections
 
 
@@ -32,7 +42,7 @@ class Member(User):
 
   #methods
 
-class Coach(Member):
+class Trainer(Member):
   #connections
 
 
@@ -62,6 +72,44 @@ class Remex(Member):
 
 #3. Boat
 class Boat(models.Model):
+  #connections
+
+
+  #properties
+
+
+  #methods
+
+
+#4. Events
+class Event(models.Model):
+  #connections
+
+
+  #properties
+
+
+  #methods
+
+class Outing(Event):
+  #connections
+
+
+  #properties
+
+
+  #methods
+
+class Race(Event):
+  #connections
+
+
+  #properties
+
+
+  #methods
+
+class Training(Event):
   #connections
 
 
