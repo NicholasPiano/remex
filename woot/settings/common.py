@@ -1,9 +1,11 @@
 #remex.woot.settings.common
 
+#to create a new app from skeleton: dm startapp
+
 ### Import
 
 #django
-from djcelery import setup_loader
+# from djcelery import setup_loader
 
 #local
 
@@ -191,10 +193,10 @@ DJANGO_APPS = (
 
 THIRD_PARTY_APPS = (
     # Static file management:
-    'compressor',
+#     'compressor',
 
     # Asynchronous task queue:
-    'djcelery',
+#     'djcelery',
 )
 
 LOCAL_APPS = (
@@ -247,7 +249,7 @@ CELERY_TASK_RESULT_EXPIRES = timedelta(minutes=30)
 CELERY_CHORD_PROPAGATES = True
 
 # See: http://celery.github.com/celery/django/
-setup_loader()
+# setup_loader()
 #### END CELERY CONFIGURATION
 
 
@@ -258,26 +260,26 @@ WSGI_APPLICATION = 'wsgi.application'
 
 
 #### 17. COMPRESSION CONFIGURATION
-# See: http://django_compressor.readthedocs.org/en/latest/settings/#django.conf.settings.COMPRESS_ENABLED
-COMPRESS_ENABLED = True
+# # See: http://django_compressor.readthedocs.org/en/latest/settings/#django.conf.settings.COMPRESS_ENABLED
+# COMPRESS_ENABLED = True
 
-# See: http://django-compressor.readthedocs.org/en/latest/settings/#django.conf.settings.COMPRESS_CSS_HASHING_METHOD
-COMPRESS_CSS_HASHING_METHOD = 'content'
+# # See: http://django-compressor.readthedocs.org/en/latest/settings/#django.conf.settings.COMPRESS_CSS_HASHING_METHOD
+# COMPRESS_CSS_HASHING_METHOD = 'content'
 
-# See: http://django_compressor.readthedocs.org/en/latest/settings/#django.conf.settings.COMPRESS_CSS_FILTERS
-COMPRESS_CSS_FILTERS = [
-    'compressor.filters.template.TemplateFilter',
-]
+# # See: http://django_compressor.readthedocs.org/en/latest/settings/#django.conf.settings.COMPRESS_CSS_FILTERS
+# COMPRESS_CSS_FILTERS = [
+#     'compressor.filters.template.TemplateFilter',
+# ]
 
-# See: http://django_compressor.readthedocs.org/en/latest/settings/#django.conf.settings.COMPRESS_JS_FILTERS
-COMPRESS_JS_FILTERS = [
-    'compressor.filters.template.TemplateFilter',
-]
-#### END COMPRESSION CONFIGURATION
+# # See: http://django_compressor.readthedocs.org/en/latest/settings/#django.conf.settings.COMPRESS_JS_FILTERS
+# COMPRESS_JS_FILTERS = [
+#     'compressor.filters.template.TemplateFilter',
+# ]
+# #### END COMPRESSION CONFIGURATION
 
-#### 18. FILE UPLOAD CONFIGURATION
-FILE_UPLOAD_HANDLERS = (
-    'django.core.files.uploadhandler.MemoryFileUploadHandler',
-    'django.core.files.uploadhandler.TemporaryFileUploadHandler',
-)
+# #### 18. FILE UPLOAD CONFIGURATION
+# FILE_UPLOAD_HANDLERS = (
+#     'django.core.files.uploadhandler.MemoryFileUploadHandler',
+#     'django.core.files.uploadhandler.TemporaryFileUploadHandler',
+# )
 #### END FILE UPLOAD CONFIGURATION
