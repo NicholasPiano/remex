@@ -17,7 +17,7 @@ from sys import path
 ### Settings
 
 #### 1. AUTH
-AUTH_USER_MODEL = 'user.User'
+AUTH_USER_MODEL = 'member.Member'
 #### END AUTH
 
 
@@ -202,8 +202,8 @@ THIRD_PARTY_APPS = (
 LOCAL_APPS = (
     # Augmented auth model
     'apps.boat',
-    'apps.club',
-    'apps.event'
+#     'apps.club',
+#     'apps.event'
     'apps.member',
 )
 
