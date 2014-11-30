@@ -201,7 +201,10 @@ THIRD_PARTY_APPS = (
 
 LOCAL_APPS = (
     # Augmented auth model
-    'apps.users',
+    'apps.boat',
+    'apps.club',
+    'apps.event'
+    'apps.member',
 )
 
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps

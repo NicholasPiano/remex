@@ -1,4 +1,4 @@
-#apps.users.admin
+#apps.boat.admin
 
 #django
 from django.contrib import admin

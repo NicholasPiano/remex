@@ -1,4 +1,4 @@
-#apps.users.signals
+#apps.event.signals
 
 #django
 from django.dispatch import receiver

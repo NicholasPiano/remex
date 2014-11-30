@@ -1,4 +1,4 @@
-#apps.users.resources
+#apps.event.resources
 
 #django
 

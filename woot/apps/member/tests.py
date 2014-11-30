@@ -1,4 +1,4 @@
-#apps.users.tests
+#apps.member.tests
 
 #django
 from django.test import TestCase

@@ -4,7 +4,7 @@
 from django.db import models
 
 #local
-from apps.users.models import User
+from apps.link.models import Link
 
 #util
 import datetime
@@ -14,106 +14,12 @@ import datetime
 #1. Club
 class Club(models.Model):
   #connections
-
+  #what is a club a part of? A league? A university?
+  #St. Edmund's and First and Third are both Cambridge rowing clubs
+  #Invesigate multiple database support for cross-site requests
+  link = models.ForeignKey(Link, related_name='clubs')
 
   #properties
   name = models.CharField(max_length=255)
-
-  #methods
-
-
-#2. Member
-class Member(User):
-  #connections
-  club = models.ForeignKey(Club, related_name='members')
-
-  #properties
-
-
-
-  #methods
-
-class Coach(Member):
-  #connections
-
-
-  #properties
-
-
-  #methods
-
-class Trainer(Member):
-  #connections
-
-
-  #properties
-
-
-  #methods
-
-class Coxswain(Member):
-  #connections
-
-
-  #properties
-
-
-  #methods
-
-class Remex(Member):
-  #connections
-
-
-  #properties
-
-
-  #methods
-
-
-#3. Boat
-class Boat(models.Model):
-  #connections
-
-
-  #properties
-
-
-  #methods
-
-
-#4. Events
-class Event(models.Model):
-  #connections
-
-
-  #properties
-
-
-  #methods
-
-class Outing(Event):
-  #connections
-
-
-  #properties
-
-
-  #methods
-
-class Race(Event):
-  #connections
-
-
-  #properties
-
-
-  #methods
-
-class Training(Event):
-  #connections
-
-
-  #properties
-
 
   #methods

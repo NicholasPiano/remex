@@ -1,4 +1,4 @@
-#apps.users.views
+#apps.event.views
 
 #django
 from django.http import HttpResponse

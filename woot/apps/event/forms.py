@@ -1,4 +1,4 @@
-#apps.users.forms
+#apps.event.forms
 
 #django
 from django import forms
